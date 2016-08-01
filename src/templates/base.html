@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block head_title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}"/>
+</head>
+<body>
+
+<ul>
+	<li><a href="{% url "inicio" %}">Inicio</a></li><!-- el nombre inicio se refiere al name que esta en urls.py-->
+	<li><a href="{% url "sobre" %}">Sobre nosotros</a></li>
+
+</ul>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
